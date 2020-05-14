@@ -11,16 +11,16 @@
  */
 
 function load_vuescripts() {
-    wp_enqueue_style('vue_wp_styles', plugin_dir_url( __FILE__ ) . 'dist/css/app.css');
-    wp_register_script('vue_wp_compiled', plugin_dir_url( __FILE__ ) . 'dist/js/app.js', true);
-    wp_register_script('vue_wp_dependencies', plugin_dir_url( __FILE__ ) . 'dist/js/chunk-vendors.js', true);
+    wp_enqueue_style( 'vue_wp_styles', plugin_dir_url( __FILE__ ) . 'dist/css/app.css' );
+    wp_register_script( 'vue_wp_compiled', plugin_dir_url( __FILE__ ) . 'dist/js/app.js', true );
+    wp_register_script( 'vue_wp_dependencies', plugin_dir_url( __FILE__ ) . 'dist/js/chunk-vendors.js', true );
 }
 
-add_action('wp_enqueue_scripts', 'load_vuescripts');
+add_action( 'wp_enqueue_scripts', 'load_vuescripts' );
 
 function attach_vue() {
-    wp_enqueue_script('vue_wp_compiled');
-    wp_enqueue_script('vue_wp_dependencies');
+    wp_enqueue_script( 'vue_wp_compiled' );
+    wp_enqueue_script( 'vue_wp_dependencies' );
 
     return "<div id='app'></div>";
 }
