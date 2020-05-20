@@ -12,5 +12,5 @@ Also, Vue is awesome, and who wouldn't want to use it every chance they get?
 2. Once the dependencies are installed develop your app and run `npm run build`. The script will automatically paste the dist folder and its contents into the WordPress plugin folder.
 3. Take the contents of `/plugin` and upload it to your WordPress project's `/wp-content/plugins` folder.
 4. Log into WordPress and activate the plugin.
-5. Add the shortchode defined in the plugin file (It's `[vue_wp]` by default) to any WordPress page, post, or template.
+5. Add the shortchode defined in the plugin file (It's `[vue_wp]` by default) to any WordPress page  or post. Paste `<?php echo do_shortcode("[vue_wp]"); ?>` into a template if you'd prefer to directly embed it in the code.
 6. Sit back and contemplate how great life is now.
