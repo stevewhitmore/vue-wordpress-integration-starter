@@ -14,3 +14,7 @@ Also, Vue is awesome, and who wouldn't want to use it every chance they get?
 4. Log into WordPress and activate the plugin.
 5. Add the shortchode defined in the plugin file (It's `[vue_wp]` by default) to any WordPress page  or post. Paste `<?php echo do_shortcode("[vue_wp]"); ?>` into a template if you'd prefer to directly embed it in the code.
 6. Sit back and contemplate how great life is now.
+
+## Run tests
+1. `cd app` to get to Vue app root directory
+2. `yarn jest` to run all tests. Run with `--watch` for continuous refresh and to learn about options for test runs.
