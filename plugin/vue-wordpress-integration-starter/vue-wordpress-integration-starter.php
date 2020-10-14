@@ -3,7 +3,7 @@
  * Plugin Name:         << Plugin name >>
  * Plugin URI:          << Wherever you keep the app readme >>
  * Description:         << Vue app description >>
- * Version:             0.0.1
+ * Version:             1.0.0
  * Author:              << Your name >>
  * Author URI:          << Your website >>
  * 
