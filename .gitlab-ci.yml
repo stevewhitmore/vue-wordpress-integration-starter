@@ -1,0 +1,31 @@
+image: alpine:latest
+
+stages:
+  - validation
+  - test
+
+f_check:
+  stage: validation
+  script:
+    |
+      FDESCRIBE=$(find ./app/specs -type f -exec grep "fdescribe(" {} \;)
+      FIT=$(find ./app/specs -type f -exec grep "fit(" {} \;)
+      if [ -n "$FDESCRIBE" ]; then
+        echo "fdescribe found"
+        echo "$FDESCRIBE"
+        exit 1
+      fi
+      if [ -n "$FIT" ]; then
+          echo "fit found"
+          echo "$FIT"
+          exit 1
+      fi
+
+unit_tests:
+  stage: test
+  script:
+    |
+      apk add --no-cache nodejs yarn
+      cd app
+      yarn install
+      yarn jest
