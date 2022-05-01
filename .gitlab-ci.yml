@@ -8,7 +8,7 @@ f_check:
   stage: validation
   script:
     |
-      FDESCRIBE=$(find ./app/specs -type f -exec grep "fdescribe(" {} \;)
+      FDESCRIBE=$(find ./app/tests -type f -exec grep "fdescribe(" {} \;)
       FIT=$(find ./app/specs -type f -exec grep "fit(" {} \;)
       if [ -n "$FDESCRIBE" ]; then
         echo "fdescribe found"
